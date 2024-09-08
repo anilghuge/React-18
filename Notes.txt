@@ -1,0 +1,2527 @@
+26.10.2023:
+===========
+
+1.What is Difference between Angular and React
+-React is a libray
+-Angular is a Framework
+
+2.Where Angular is used?
+-It is used in projects where lot of interactions and flow need to be controlled client side.
+
+3.Where React is used?
+-It is used in prject where lot of framework is already in use backend,
+	we just need a good front end UI. 
+
+4.Why we need Angular and React?
+-Modern web developement have lot of challenges.
+-Fluid UX 
+-Loosely coupled
+-Unified UX
+
+27.10.2023
+============
+1.What are the challenges in modern web development?
+-Unified UX -Same experience cross every device.
+-Fluid UX 
+-Loosely Coupled
+-Simplified Deployment
+
+2.Features of React
+	1.It is component based.
+		-Easy to reuse
+		-Easy to extend
+		-Easy to upgrade
+		-Easy to build
+
+	2.It uses Virtual DOM
+		 
+
+FAQ:What is DOM?
+
+FAQ:What is Shadow DOM?
+
+FAQ:What is Virtual DOM?
+
+
+30-10-2023
+==========
+What are the issues with React?
+-it is not designed for what you are using,hence lot of GAPs.
+-You need lot of 3td party libraries and frameworks support.
+-Fast pace of development leads to poor documentation.
+
+Where we can use React?
+-You can use reat in existing web application.
+[.net,php,python,jsp,node-express,HTML,we app..]
+-You can build a react application and integrate with existing application.
+[Distributed Applications]
+-You can use react in mobile native applications.
+[Android,ios,windows][ionic,nativescript,cordova,react native]
+
+
+React in Existing Web Application:
+1.Setup Environment for React and Web
+a)Download and install Node JS on your PC.
+b)Download and install "Visual Studio Code" edior
+
+2.Create a new Web Application
+
+1.Create a new folder for your project on PC
+	D:\react-site
+2.OPen VsCode above location.
+
+3.Open Terminal and run the following command
+npm init -y [pacakge.json]
+
+4.Add follwing folder into project
+
+a)public :to keep static resources like html,img,videos,text,ppt,pdf
+
+b) src:To keep all dynamic resoucres like js,ts,css etc
+
+c)Add following files into public folder
+index.html
+home.html
+
+
+react
+react-dom.js
+babel
+
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+
+
+31/10/2023
+==========
+				       Creating React 18 Application
+
+- React 18+ version re-written the library.
+- React 18 introduces new features that improves the library with functionality and approach.
+- You can create a complete React 18 application using various bundling tools.
+- There are various bundling tools like
+			a) Webpack
+			b) Vite
+			c) Parcel etc..
+- If you have installed NPM as package manager then Webpack is in-built available.
+- To create a new React 18 application with webpack you have to run the following command from your command prompt.
+
+
+		D:\> npx  create-react-app    appName
+
+Ex:
+		D:\> npx  create-react-app    shopping-react
+
+- Open project folder in Visual Studio Code
+
+		
+					   React Project Infrastructure
+
+
+File / Folder				Description
+---------------------------------------------------------------------------------------------------------------
+node_modules			It comprises of library resources.
+						It contains the files related to various libraries that are
+						installed in your project using NPM.
+
+public					It comprises of static resources
+						[html, images, text , pdf, videos etc..]
+
+src						It comprises of dynamic resources
+						[.css, .js, .ts, .scss, .tsx, .jsx.. ]
+
+.gitignore					It comprises of configuration of resources which are to
+						be ignored while collabrating with GIT repository.
+
+package.json				It comprises of project meta data.
+						[name, version, license, dependencies..]
+
+package-lock.json			It comprises of dependencies meta data.
+
+
+Readme.md				It is help documentation for project.
+
+
+- To start react application run the following command in terminal
+
+		> npm  start
+
+- Open any browser and request the following
+
+		http://localhost:3000
+
+- To change the initial output you have to modify the function "App()"
+
+		src / app.js
+
+		function App()
+		{
+		  return (
+			<div>
+				<h1> Welcome to React </h1>
+			</div>
+			)
+		}
+
+01/11/2023
+===========
+React Components
+
+Javascript Function
+Javascript Class
+
+https://facebook.github.io/jsx/
+https://jsx.github.io/
+
+Javascript Topics
+-Modules
+-Functions
+
+ 
+02/01/2023
+============
+          Function ,classes and module
+
+Function
+---------
+1.Function declartion
+2.Function Expression
+3.Function Closure
+4.Function Parameters
+5.Function Callbacks
+6.Function Promises
+7.Function Return
+8.Function Recusrsion
+9.Arrow Function
+
+FAQ :Why we need a Function?
+Ans:Function is used to refactor the code
+
+FAQ:What is refactor
+Ans:Refactoring is the process of encapulating a set of statements and storing under the 
+    refersnces of function or file,so that you can reuse the statements
+
+FAQ:How Function is Configured?
+Ans :There are 2 ways of configured a function in javascript
+    1.Function declaration
+    2.Function Expression
+
+Syntax:
+Declartion   function name(){}
+
+Expression const Name=function(){}
+
+Note:A function Expression allow to chnage the functionality according to state and situation .
+it uses IIFE Pattern[Immediatley Invoked Function Expression]
+
+FAQ:What is function declaration ,signature and defination?
+Ans:Every Function configuation comprises of 3 phase
+    1.declaration
+    2.signature
+    3.defination
+
+    function Hello(param){}
+
+    function Hello(param)=>Declatiom
+    Hello(Param)=>signature
+    {}=>defination
+
+FAQ:What is role of Parameters in function?
+Ans:A parameter is used to modify the function
+
+FAQ:What type of parameters are allowed in function?
+Ans:Any type,Primitive,Non Primitive,function.
+
+Primitive:number,string,boolean,null,undefined,symbol,bigint
+non=array,object,map,set
+
+FAQ:What is max limit of Parameters?
+Ans:1024
+
+FQA:What is rest Parameters?
+Ans:A single rest parameter can allows multiple arguments.
+
+FAQ:what is spread synatx for parameters?
+Ans:It Allows to Spread actual parameter values into mutiple formal parameter
+
+FAQ:What is difference between spread and rest
+Ans:Rest is about formal parameter
+    Spread is about parameter
+
+FAQ:Why a function requires "return"?
+Ans:A function with return is used to build Expression
+    Expression comprises of logic and data storage
+    It allows to use the memory of function before it is destroyed.
+
+
+FAQ:What is a function can return?
+Ans :A function can return any typr,primitive,no-primitive or function
+
+
+03/11/2023
+============
+
+Function Closure
+-Closure is machanism that allow the member of outer function accessble to inner functions.
+
+Function Callbacks and Promise:
+    -Callbacks is technique of configuring set of function that execute according to state and situation
+    -Callback use "Synchronous" technique
+    -Sync is blocking which blocks the other tasks in background when it is perofroming the specified task.
+    -passing function as arguments is called Callback
+
+Promise:
+    use Async Methods
+    promise use unblocking technique,without blocking the existig tasks it can peroform the given task
+    -Promise compries of 3 phase
+    a.intital
+    b.resolved
+    c.rejected
+
+    -promise in js is creeted by using Promise() constructor
+    syntax:
+    var Name=new Promise(function(resolve,reject){
+        if(condition){
+            resolve("respone")
+        }else{
+            reject("error")
+        }
+    })
+
+    -Promise executes resolve by using "then()" and reject by using "catch"
+
+    FAQ:Name any promise of js
+    Ans:Fetch()
+
+
+    Function Genartor:
+    -A function genartor is used in javascript to create iterator
+    -Iterator is softwused are design pattern used to read elements from collection in sequentials order
+    -It doesn't require condition,initialization and counter
+
+    syntxa:function* Name(){
+        yeild value;
+        yield value;
+    }
+
+    * => Zero or more times
+    yield => return a value and moves to next.
+
+-Generator object provides the method "next()"
+-next() provides the properties
+    a) value
+    b) doesn
+"value" return the yield
+"done" return true if there is no more value to yield
+
+
+
+8.Arrow Function
+it is short hand technique of writing a function Expression
+
+syntax:
+    var hello=()=>{};
+
+    () function parameter
+    => return or definition
+
+
+9.Function Recursion:
+it is used to create batch operation
+
+
+Module System
+-A module comprises of value,function and classes.
+-Module is required to build a library for application.
+-Javascript bases technologies requires various modules system
+to use modules.
+
+1.Common Js
+2.Require Js
+3.UMD(Universal Module Distribution)
+4.AMD(Asynchronous Module Distribution)
+
+
+06-11-2023
+-A Component is template with markup ,style and functionality.
+-markup is define with HTML
+-Style with CSS
+-functionality with javscript or typescript
+-A Component can be desgined in React using
+    a. javascript Function
+    b.javscript classes
+
+-Desgining a component with javscript function:
+1. A Components function can be configured using
+    a)Expression
+    b)Declartion
+
+    const Login=function(){
+
+    }
+        (or)
+
+    export function Login(){
+
+    }
+
+2. Every Function component must return markup.it can't be void.
+
+    export function Login(){
+        return (
+            <markup></markup>
+        );
+    }
+
+3. Function uses JSX as language hence there are certains rules to follw for JSX.
+
+    a)A Function must return markup only as one fragment.
+        return (
+            <h1>React</h1>                   ==>invalid
+            <p> javascript Libray</p>
+        )
+
+
+        return (
+            <div>                       =>valid
+               <h1>React</h1> 
+                <p> javascript Libray</p>
+            </div>
+        )
+
+
+        return (<>
+            <h1> React</h1>                 =>valid
+            <p> javascript Libray</p>
+        </>)
+
+
+    return (
+        <React.Fragment>                    =>valid
+            <h1>React</h1>
+            <p> Javacsript Libray</p>
+        </React.Fragment>
+    );
+
+    b)It can't  have elements,every must have and end token
+    return(
+        <div>
+            <img src="pic.jpg">  ==>invalid
+            <input type="text">  ===>invalid
+        </div>
+    );
+
+     return(
+        <div>
+            <img src="pic.jpg"></img>  ==>valid
+            <input type="text"></input> ==>valid
+        </div>
+    );
+
+        or
+
+        return (
+            <div>
+
+                <img src="pic.jpg"/>        ==>valid
+                <input type="text"/>
+            </div>
+        )
+
+c) You can not use attributes for elements ,only properties are allowed.
+    attributes is immutable
+    properties is mutable
+
+4.all components must be inside "src" folder
+
+5. Typically every component comprises 3 files in real-wolrd application
+    a.login.js
+    b.login.css
+    c.login.test.js
+    [login.spec.js]
+    -".js" file comprises of markup and logic
+    -".css" file comprises of style
+    -".test.js" component of test cases
+
+    Note : Markup and logic can be defined in ".jsx" or ".js"
+
+
+    Ex :Design a register component for react application and start with register.
+================================================================================
+07/11/2023
+Setup Bootstarp for react Project:
+1.Install Bootstarp and Bootstarp ICOn from terminal
+
+npm install bootstarp --save
+npm install bootstarp-icons --save
+
+To use bootstrap and icon in all components ,you have to import in "index.js"
+import '../node_modules/bootstrap/dist/css/bootstrap.css'
+import '../node_modules/bootstrap-icons/font/bootstrap-icons.css'
+
+3.You can use bootstarp and its icons in any component by refering to their class names.
+
+Create NetFlix example
+
+===============================React Component End=======================================
+08/11/2023
+
+              Data Binding in React
+-Data Binding is the process of accsessing data from source and render in UI,identifying the chnages in UI and updating 
+ back into data source
+
+ - Data Binding is classified into 2 types
+ 1]One way Binding
+ 2]Two way Binding
+
+ -Trygve introduced the concept of data binding in application,which are separted into 3 components called
+ a)Model
+ b)View
+ c)Controller
+
+-Model repserent data.
+-View represent UI.
+-Controller represent application logic.
+-Controller handle communication between model and view.
+
+-One Way Binding allows application to access data implicitly and binding UI.but will not allow to
+update the change back to model.
+
+-React support only one way binding.
+    * it is secured
+    * it used less memory
+    * it is faster in rendring
+    * it improves the performance of application
+    * however it is not good for updating tha data source
+    * It requires explicit action.
+-React can handle one way data binding without using DOM manipulation or DOM Methods
+-React uses a binding Expression "{}" to bind dynamic data to UI.
+
+Javacsript Data Binding Expression "${}"
+
+-React uses javascript data types
+a)Primitive
+    number,string,boolean,null,undefined,symbol,bigint
+b)Non Primitive:
+    array,object ,map
+c) Data type
+d)Regular Expression type
+
+syntxa:
+    var userName='Jhon';
+    <p>Hello! {userName}</p>
+
+
+    Ex :Primitive type
+        export function DataBinding() {
+  var userName = "Anil";
+  var age = 22;
+  var subscribe = true;
+  return (
+    <>
+      <h2>Data Binding</h2>
+      <p>
+        Hello ! {userName} you will be {age + 1} next year
+      </p>
+      <p>
+        {subscribe === true
+          ? "Thak you for subscribed"
+          : "Please subscribed the channel"}
+      </p>
+    </>
+  );
+}
+
+ex:array
+-React uses Array methods to read elements from array and present in UI
+-Array methods used for reading all elements
+a)forEach()
+b)map()
+c)toString()
+d)join()
+
+
+EX:Object,Array of Objects,Date,Regular Expression
+
+
+9/10/2023
+=========
+
+Object
+it is a key |value collection
+
+-Key is string type.
+-Value can be any type.
+
+var product={id:1,Name:"TV",Instock:true,Cities:['Dehli','Hyd'],{Rate:4.3,Count:3400}}
+
+<p>Name:{product.Name}</p>
+
+FAQ:
+1.What is difference between Object and Map type?
+
+Object                          Map
+-------------------------------------------------------
+Key and Value collection        Key and value collection
+
+Key can be only string type     Key can be any type
+
+Value can any type              value can be any type
+
+It requires explicit operator,  It provides serveral implicit properties and method to manipulate
+properties and methods 
+to manipulate
+
+It is slow                          It is fast
+
+It is structured                    It is Schema less
+
+
+
+2.How to remove a key from object?
+A.By usibg delete operastor
+    delete product.Price
+
+3.How to verify a key?
+A.By using "in" operator
+
+4.How to access all keys?
+A.By using "Object.keys()" or "for..in" iterator
+
+5.What are the various MAp Members?
+A.
+
+    set() Add a new key and value
+    get() To access a value with reference of key
+    keys() returns all keys
+    values() return all values
+    has() return true if specified key exists
+    delete() Removes a value with reference of key
+    clear() Removes all keys and values
+    size returns the total count of keys
+
+
+Array of Objects:
+    
+
+
+10/11/2023
+===========
+
+Date Type:
+-Date is stored in memory using "Date()"
+-the default date format is "Year-Month-Day Hrs:min:Ses.MilliSec"
+
+syntax
+
+var departure=new Date(); ==>Load current date and times
+var departure=new Date("2023-11-22 18:30:35.67") => specific date and time
+
+-To present date and time value javascript provides follwing methods
+
+getHours() - 0 to 23
+getMinutes() 0 to 59
+getSeconds() 0 to 59
+getMilliSeconds() 0 to 99
+getDate()       1 to 28,29,30,31
+getDay()        0=> Sunday
+getMonth()     0=>January
+getFullYear()   2023
+toLocalDateString()
+toLocalTimeString()
+
+
+-You can dynamically chnage date and time values in javscript using
+setHours()
+setMinutes()
+setSeconds()
+setMilliSeconds()
+setDate()
+setMonth()
+setFullYear()
+
+Note:Never use varibale to store dynamic data in react
+variable are immutable in react
+Component requires mutable data.Hence variable are not recommended.
+
+
+FAQ:Where to store data for a component
+ANs:Always use a "State" for storing data.
+
+
+        State in component:
+-Web application use "http" as protocol ,which is a state less protocol
+-State less  uses the mechanism "Go-Get-Forget"
+
+GO -Establish connection with server
+GET -Get reponse from server
+FORGET- Remove all traces about the request from server
+
+-State less nature is good for web application,as they can manage memory very well
+-It is draw back to continue of operation,as it can't remembers the data or previous request 
+    and provide to next request
+
+-Hence web application requires to implements various state management technique
+both client side and server side.
+
+-Some of client side state management technique in javascript
+    a)Query string
+    b)Local storage -Permanet ,it is accessible even you restart the pc.it is accessible in any tab of browser.
+    c)Session storage -Tempory,it is accessible in current tab it is not accessible in next tab.
+    d)Cookies -Permanet or tempory it is expiray date of Cookies
+
+-React component require state to store the data and use across request.
+-State is mutable
+- React Class Components are statefull ,they provides state implicit
+-React 18+ version support state for function components
+-State in function component is defined by using the Hook called "useState()"
+
+FAQ:Can we use state hook in class component?
+Ans:No.Hooks are allowed only in a function component.
+
+const use because state should not allow to assign
+
+syntax: const[getter,setter]=useState();
+Note: useState() Hook is a Member of "react" module
+
+ const [getter, setter] = useState("Anil");
+  Hello ! {getter}
+
+FAQ:Why const is used for configuation state?Can we use var or let for state?
+Ans:State should not allow to assign values.hence it is configured as "const"
+    state must be intilization can not be assignment.
+    You can't use var or let as they allow assignment
+
+FAQ:If you use const for state then how to store value into state?
+Ans:Every time to store value into state it must be initialized.
+
+const[userName,setName]=useState('');
+
+setName('Anil'); =>valid it is initializing memory
+
+setName='Anil'  =>invalid =>Assiging
+
+3.Why it is "useState()" not "new useState()"
+const[userName]=new useState();
+const[userName]=useState();
+
+the "new" operator is dynamic menory allocation operator,which uses "Single Call" mechanism
+useState uses "Single ton" mechanism ,object is created for first request 
+and the same object is used across any number of requests
+
+============
+13/11/2023
+Two way data binding:
+-Interally not support this.
+-It is process of accessing data from source and binding to UI.
+-Identifying the chnages in UI and upadting back to source.
+-Javacsript handles 2-way binding using various events.
+-React can use all javscript browser events.
+-But chnages in value can be identified only with "onChnage" event.
+-Hence two way data binidng can be managed only with "onChnage" event.
+
+syntax:
+    <input type="text" onChnage={handleNameChnages}/>
+    <select onChnage={handleCityChnage}/>
+
+function handleNameChnages(){
+
+}
+
+function handleCityChnage(){
+
+}
+
+-You have to use "event" argument to access information about elements and event
+[javascript uses "this" for object details and "event" for event details]
+
+-React can use only one argument that is "event",which provide access to both object and event details
+
+function handleNameChnages(event){
+    event.clientX   ===> Event details
+    event.clinetY
+    event.keyCode
+
+    event.target.id     ===>Object details
+    event.target.value
+    event.target.className
+}
+
+
+
+-You can access the value from elements and initialize into state reference by using setter
+
+const [userName,setUserName]=useState('');
+
+
+function handleNameChnages(e){
+    setUserName(e.target.value);
+}
+
+
+<input type="text" value={userName} onChnage={handleNameChnages}/>
+
+import { useState } from "react";
+
+export function TwoWayDataBinding() {
+  const [userName, setUserName] = useState("Anil");
+
+  return (
+    <>
+      <h2>Edit </h2>
+      User Name:{" "}
+      <input
+        type="text"
+        value={userName}
+        onChange={(e) => setUserName(e.target.value)}
+      />
+    </>
+  );
+}
+
+Data Binding:-
+One way Binding
+Two Way Binding
+
+style Binding
+Class Binding
+Event Binding
+=============
+14/11/2023
+
+2 way data binding
+    onChnage
+
+Summary:-
+-One Way Binding
+-Two Way Binding
+
+Style binidng
+-Style Binding is the process of binding CSS attributes to any JSX elements dynamically
+-it is required to chnage appearence of elements dynamically.
+
+Javacsript style binding:
+<input type="text" id="UserName">
+
+documnet.getElementById("UserName").style.cssAttribute="value"
+
+CSS => background-color => backgroundColor
+    => font-style=> fontStyle
+
+React style binding:
+
+<input type="text" style={{attributeName:value,attributeName:value}}/>
+
+<input type="text" style="color:red"/>  =>invalid
+
+<input type="text" style={{color:'red'}}/> =>valid
+
+FAQ:What is issue with style binidng?
+Ans:Style is inline and it is good for individual elements
+it is not good for reusability across elements
+it is not good for configuring multiple effects for elements
+
+export function StyleBinding() {
+  return (
+    <div className="conatiner-fluid">
+      <h2>Style Binding</h2>
+      <input
+        type="text"
+        style={{ border: "2px solid red", boxShadow: "2px 2px 2px red" }}
+      />
+    </div>
+  );
+}
+
+
+Class Binding
+============
+-It is the process of binidng a CSS class dynamically to any JSX elements
+-it allows to Configure mutiple style simultaneouly at the same time.
+-A class is configure to JSX element by using "className"
+
+===================================
+16/11/2023
+
+Event Binding
+-Event is a message sent by sender to its subscriber in order to nodify the chnages.
+-Event follows a software design pattern called "Observer"
+-Observer is communication pattern.It is under "Behavioural Patterns".
+-Event uses "Delegate" mechanism [Function Pointer]
+
+syntax:
+    function insertClick(){   ====>subscriber
+
+    }
+
+    <button onclick="insertClick()">  ==>Sender
+
+    -subscriber define the actions to perform.
+    -Sender sends a notification and specifie when to perform the action.
+    [Sender triagger the actions].
+
+    Synthetic Events:
+    -Every event is browser event.
+    -In Javacsript HTML elements can use the browser events.
+    -React can't use "browser" events[Browser events are related BOM]
+    -React uses a virtual DOM libary called "SyntheticEvents",which map to browser events.
+
+    Actual DOM Event                Syntax Event
+    ================================================
+    onclick                         onclick
+    onblur                          onBlur
+    onchange                        onChange etc..
+
+    -Every event extends "SyntheticEvent"[interface]
+
+Event Handler:
+==============
+
+    -Events are configured  for elements using an EventListener or EventHandler.
+    -React uses EventHandler from SyntheticEvents.
+
+    Syntax:
+    <button onClick={insertClick}>
+
+    onClick={insertClick}  =>EventHandler
+    onClick                =>Event
+
+
+    onChange    :ChangeEventHandler :EventHandler
+    onClick     :ClickEventHandler  :EventHandler
+    onFocus     :FocusEventHandler  :EventHandler
+
+    -Event Handler can be configured in 2 ways
+    a)Inline funcationality
+    b)Embedded functionality
+
+
+    syntax:inline
+       <h2>Event Binding</h2>
+      <button onClick={() => alert("insert click..")}>Insert</button>
+
+
+      syntax:Embedded
+        function insertClick(){
+
+        }
+
+        <button onClick={insertClick}>Insert</button>
+
+
+
+Event arguments:
+==================
+    -Every Event in react have a default argument,which maps to "Event" base.
+    -Event base can provide access to both element related properties and event properties.
+    -element properties are accessible using "target"
+        e.target.id
+        e.target.name
+        e.target.className
+        e.target.value etc
+    
+    -Event properties are accessible directly
+
+        e.clientX
+        e.clientY
+        e.shiftKey
+        e.which
+        e.ctrKey etc..
+======================
+17/11/2023
+
+    Event Propagation
+
+    -It is mechanism follwed for events configured for element with parent and child hierarchy
+    -The child element event triaggers and contiue the propagation to its parent 
+    -This leads to the execution of all events configured for child and parent level hierarchy.
+    -You can use "stopPropagation()" of event to prevent execution of parent events automatically.
+
+    syntax:
+        function handleButton(e){
+            e.stopPropagation();
+        }
+
+
+Prevent Default:
+=================
+
+-HTML form provides generic buttons
+a)submit
+b)reset
+
+
+
+<button type="submit">  => it can submit form data to server
+
+<button type="reset">  => It can reset the form data
+
+<button>   =>default is submit
+
+
+-HTML form have non-generic button
+a)button
+    <button type="button">  => without any pre-defined functionality
+
+-Generic elements have pre-defined funcationality,which firesup after the 
+custom functions that you defined for element.
+
+-You can prevent the dafult functionality of any elements by using the method "preventDefault()"
+
+
+syntax: 
+function handleSubmitCheck(e){
+    e.preventDefault();
+}
+
+FAQ's:1.Can we have mutiple form in component
+Ans:Yes
+
+2.Can we configure a form within another form?can we have nested forms?
+Ans:No
+
+3.Can a form have multiple submit buttons?
+Ans:Yes
+
+==========================
+20/11/2023
+
+summary:
+    -Event
+    -Event Handler
+    -Event arguments
+    -Synthetic Event
+    -StopPropagation
+    -PreventDefault
+
+    Various SyntheticEvents in React
+    ----------------------------
+
+    1.Synthetic Mouse Events
+        onMouseOver
+        onMouseOut
+        onMouseUp
+        onMouseDown
+        onMouseMove
+
+=======================================
+21/10/2023
+Element state event:
+    onBlur
+    onFocus
+    onChnage
+    onSelectStart
+
+button event:
+onClick
+onDoubleClick
+onContextMenu
+
+Clipboard Events
+onCut
+onCopy
+onPast
+
+Touch Events
+onTouchStart
+onTouchEnd
+onTouchMove
+
+======================================
+24/10/2023
+-Mouse Events
+-Keyborad Events
+-Clipboard Events
+-Button Events
+-Touch Events
+-Timer Events
+	-Javascript date and time values are configured using Date().
+	cont[now] =useState(new Date()); //load current date and time
+	const[dept] =useState(new Date("yy-mm-dd hr:min:sec.millsec"));
+	-read date and time values you can use the functions
+        getHours()
+        getMinutes()
+        getSeconds()
+        getMilliSeconds()
+        getDate()
+        getDay()
+        getMonth()
+        getFullYear()
+        toLocateDateString()
+        toLocateTimeString()
+    -to set date and time values
+        setHours()
+        setMinutes()
+        setSeconds()
+        setMilliSeconds()
+        setDate()
+        setMonth()
+        setYear()
+
+    -React can use javscript timer events
+    setTimeout()
+    clearTimeout()
+    setInterval()
+    clearInterval()     
+
+    setTimeout() : 
+    -it is used to control debouncing in application
+    -debouncing is technique where a task can be locked in memory and keep inactive[sleep] for specific duration
+        and then later release into process.
+    -Tak is removed from memory and related into process.Hence task execute only once.
+    -JavaScript Throttling is a mechanism that allows a function execution for a limited number of times after that it will block its execution
+    Syntax :
+        setTimeout(function(){},timeInterval)
+
+    clearTimeout():
+    -It can remove the task from memory
+    -You can remove before it is released into process
+
+    syntax:
+        clearTimeout(referenceName);
+
+    setInterval():
+        -It is a timer event that loades the given task into memory and release into process a regular time intervals
+        -it is not removed from memory, a copy of function is released into process.Hence it executes 
+        repeatedly until removed from memory
+
+        syntax:
+        setInterval(function(){},timeInterval)
+
+    clearInterval():
+        -it removes the task from memory
+
+        syntax:
+            clearInterval(referenceName)
+==========================================
+25/11/2023
+Form Event: 
+    -These are the events defined for <form> element.
+    -These events will fireup only with generic buttons,submit and reset
+    
+    onSubmit
+    onRest
+
+    Syntax:
+        <form onSubmit={handleSubmit} onRest={handleRest}>
+                <button type="submit">Submit</button>
+                <button type="reset">Cancel</button>
+        </form>
+
+summary -Events:
+    1.Mouse
+    2.Keyborad
+    3.button
+    4.element state
+    5.Touch
+    6.Clipboard
+    7.Form
+    8.Timer etc.
+
+            Data From API
+-Javacsript based technologies can use various technique for handling communication with API request
+
+    XMLHttpRequest Object
+    fetch() promise
+    jQuery Ajax Methods
+    3rd party libraries- axios,whatwgFetch etc.
+
+================================================
+27/12/2023
+XMLHttpRequest
+-It is a javascript object used to communicate with a end Point
+-XMLHttpRequest object provides various properties and method to handle communication
+
+syntax :
+    var http=new XMLHttpRequest();
+
+    Member                          Description
+----------------------------------------------------------
+
+open()      it is used to configure the request
+            it comparises
+            a)Request type[GET,POST]
+            b)Request end point location[source]
+            c)Boolean Async[true,false]
+
+            Synatx :    
+                    http.open("GET","URL",true) 
+
+send()      It sends the request to end point.
+            It will process the configured request
+
+            Synatx:
+                http.send();
+=========================
+28.11.2023
+axios
+                
+=======================
+
+14.12.2023 -Done
+
+
+
+
+19.12.2023
+
+	React Class Components:
+
+Issues With OOP:
+-OOP will not suport low level features
+-Low Level features are required to interact with hardware service directly
+-OOP can't interact with hardware service directly
+-It is complex in Configuration
+-It uses more memory
+-it is slow 
+
+Features of OOP:
+-Easy to reuse
+-Easy to extend
+-Secured Code
+-Clean Separation
+-Dynamic Polymorphism
+etc..
+
+
+Creating a class Component:
+1.Class is Configured using declartion.
+ class Name{}
+
+2.A class gets Component behaviour by extending
+ a)React.Component -it is load whole component again when chnage is occur
+ b)React.PureComponent - it will not load whole component again .i will load specific part of component which is chnage
+
+-Every class component is know as "StateFull" Component.
+-React.Component is the super class that configures "State" at the time of constrcting an object for class.
+-If your component have to use state then it must have constructor that calls super constructor
+
+Synatx:
+	export class Name extends React.Component{
+		
+		constructor(){
+			super();
+		}
+	
+	}
+
+
+-Every class component returns a markup by using "render()" method,which is super class method.
+
+-State in Class Component:
+ 1.Class Components can't use react hooks.
+ 2.Hence you can't use "useState()" hook in class component.
+ 3.Class Component is state full component.It comprises of default state.
+ 4.You have to configure state in constructor by using
+	this.state={
+	key:value,
+	key:value
+	}
+
+
+23/12/2023
+==========
+
+Routing
+=======
+
+
+-Web development is all about Objects and Techniques
+-Web Objects include both client side and server side
+	Document Objects
+	Browser Objects
+	CSS Objects
+	Session Objects
+	Application Objects
+	Cookie Object
+	Server Object
+	Path Object
+	Memory Object etc.
+
+-Web Techniques include both server side and client side
+	Style Binding
+	CLass Binding
+	Data Binding
+	Model Binding
+	Caching 
+	State Menagement
+	Routing
+	Event Binding etc.     
+
+-Routing is techinque used in web application to configure user and SEO friendly URL.
+-It allows to query any content directly from URL.
+-It enables Ajax requests,which allows to load new details into page without reloading the page.
+-It enable SPA[Single Page Application] approach,where user can stay on page and can access everthing into page.
+-It can enable partial postbacks and asynchronous rendering.
+-Routing can be both server side or client side.
+-React JS routing library is not a part of its core library
+-React routing library have 2 major versions
+	1.V5 [React Router DOM 5] upto 17x of react
+	1.V6 [React Router DOM 6] upto 18x of react 
+
+Note:V6 is complete re-write of routing library.
+
+Create Project:
+	npx create-react-app react-routing-demo
+
+
+setup routing:
+	1.Install react-router-dom library
+	>npm i react-router-dom --save
+
+	2.Router DOM components you can import and directly implements in application
+
+	<BrowserRouter>
+	<Routes>
+	<Route>
+	<Link>
+	<Outlet>
+	etc.
+
+3.Routing is configured in startup component and it allows to access other components ans render into startup component.
+
+
+Router Components:
+1.BrowserRouter :
+	-It is a provider for routes in virtual DOM.
+	-Provider is component of DI[Dependency Injection] which is used to location your resources in memory.
+	-BrowserRouter can translate the virtual DOM routes into actual DOM location object.
+
+2.Routes :
+	-It is a component for configuring collection of routes.
+	-It is used to construct a "Route Table".
+
+3.Route:
+	-It is used to configure a route inside routes collection.
+	-Route defines the request path and element to render as response.
+
+
+syntax:
+	<BrowserRouter>	
+		<Routes>
+			<Route path="" element=""></Route>
+			<Route path="" element=""></Route>
+		<Routes>		
+	</BrowserRouter>
+
+-Route path comprises meta characters and request name.
+	path="/" it is configure default to render
+	path="*" it is used to configure the content to render when requested component not found
+	path="name" it is used to request specific
+
+
+4.Link 
+-It is used to configure a hyperlink that navigates to specific path in routing.
+
+	<Link to path="path">Text |Image</Link>
+
+26/12/2023
+==========
+		Router Parameters
+-A parameter allows to query any content directly from URL.
+-In traditional web applications we use lot of query strings
+
+	https://www.amazon.in/products.aspx?category=electronic&subcategory=mobile
+-Route parameter provides a uniform and simple techinque for quries
+ 	https://www.amazon.in/products/electronic/mobiles
+
+-Route with parameters is configure using the following synatx:
+	<Route path="name/:param1/:param1" element={<Component/>}/>
+
+-Route parameters are explicitly passed with values from URL or Link Component.
+
+http://localhost:3000/name/value1/value2 
+
+<Link to="/name/value1/value2">Text</Link>
+
+-React provides "useParam()" hook,from "react-router-dom" library.
+-It can read route parameters and access in any component.
+
+	let param=useParams();
+
+-All Parameters are returned as "object".
+
+params={key:value,key:value}
+
+params={param1:value1,param2:value2}
+
+params.param1=value1
+params.param2=value2
+
+
+27/12/2023
+===========
+"Child" path is the relative path for "parent."
+
+FAQ:Where the route path results are rendered?
+=>If it is absoulate path then it renders in new screen,how ever in root container.
+ If it is relative path then it renders in outlet area. it is defined with <Outlet> component of "react-router-dom".
+
+Note: /details/${product.id} absoulate path open in new page
+	details/${product.id} relative path open in outlet
+
+Note:A Component have to mount again when ever the relative path chanages.
+	You can define the route parameter as "dependency" for component mount phase.
+	"useEffect()" is hook that configures mount phase with dependency.
+
+Synatx:
+	const param=usePrarams();
+	useEffect(()=>{
+	},[params.parameterName])
+
+"Mount Dependency" is an array type henence there can be multiple dependencies
+
+FAQ:Can we have multiple Outlets?
+Ans:Yes
+
+FAQ:How to handle dynamic navigation?
+=>By using "useNavigate()" hook[V6]
+	   "useHistory" hook[V5]
+
+Synatx:
+	let navigate=useNavigate();
+
+navigate("relativePath");
+navigate("/absolutePath");
+
+FAQ:What are search Parameters?
+=>A Search parameter is the query string in URL
+
+FAQ:How to access queryString?
+=> Javascript => location.search
+  React => useSearchParameters();=> it returns a "map" with key/value
+
+Synatx:
+	localhost:3000/products?name1=value1&name2=value2
+
+	let[search]=useSearchParams();
+	search.keys();
+	search.values();
+	search.entries() etc.
+
+28/12/2023 
+===========
+Summary:-
+1.Basic Routes
+-Route Parameters
+-Search Parameters
+-Wild Card routes
+-Nested Routes
+-Router Outlets
+-Dynamic Navigation
+
+-Hooks
+	useParams()
+	useSearchParams()
+	useNavigate()
+-Components
+BrowserRouter
+Routes
+Route
+Link
+Outlet
+
+28/12/2023
+============
+Authentication & Authroization Using Routes
+
+-Authentication is process of verifying user credentials like userid,password,otp,token etc.
+-Authrorization is process of providing access to various resources.it is the process of configuring restriction for resources.
+
+1.Create a new collectiob in your MongoDB "todo" database.
+
+		"users"
+{
+"UserId":"Anil123",
+"UserName":"Anil"
+"Password":"Anil@123",
+"Mobile":"+919850487947"
+}
+
+2.Create a Server side API to handle communication with users
+
+	GET  /users          return all users
+	POST /registeruser  Add new user into database
+npm i cors express mongodb --save
+
+3.create api.js
+
+4.start API
+>node api.js
+
+npm install bootstrap bootstrap-icons --save
+npm install formik yup --save
+
+
+29/12/2023
+============
+	React Cookie Library
+
+-Cookie is a simple text document where client credentials can be stored.
+-It can be appended into client browser memory or permanent memory[HDD].
+-Cookies are classified into
+	a)Inmemory[Temporary]
+	b)Presistent[Permanent]
+-Javascript DOM can manage cookies using "document.cookie" property.
+-React requires a virtual DOM library for handling cookies.
+-React doesn't provide any buit-in library for cookies,you have to implement using 3rd party.
+
+1.Install React 3rd Party Cookie Library
+>npm i react-cookie --save
+
+2.If cookie is provided as service by any 3rd party then it will have 2 components
+a)Provider :Locates the cookie in memory
+b)Injects into a component
+
+Provider :<CookieProvider>
+Injector:useCookies()
+
+3.You have to configure all component within the provider scope in order to use cookies.hence configure in "index.js"
+
+import {CookiesProvider} from "react-cookie";
+
+ <CookiesProvider>
+      <TutorialIndex />  ==>root.render()
+  </CookiesProvider>
+
+4.Creating a cookie in any component.
+	import {useCookies} from 'react-cookie';
+
+const[cookies,setCookie,removeCookie]=useCookies(['name']);
+setCookie('name',value,[{options}])
+
+5.Accessing Cookie
+
+cookies.name
+
+6.Verifying cookie
+
+if(cookie.name==null)  ==>true if cookie exists
+
+7.removing cookie
+removeCookies("name");
+
+FAQ:How to verify cookie status in browser?[enabled or not]
+ANS:javascript "navigator.cookieEnabled"
+
+
+30-12-2023
+==========
+
+			Typescript
+
+User Can Register ==>Login ==> Add Appointments,View Appointments,Edit,Delete
+
+FAQ:What are the issues with Javascript?
+=>
+-It is not Strong Typed Language.
+-It is not implicitly strictly typed.
+-It is not OOP Language.
+-NO dynamic Polymorphism
+-Not easy to extend
+-No code level security.
+
+
+	Typescript
+-It is strictly typed mode of javascript.
+-Anders Hejiberg introduced "Typescript" as language.He is the architect of language called "C#[.Net]"
+-Google started a language called "atscript" in early 2013,to provide an alternative for Javascript
+-Google started using Typescript as langauge for its framework "Angular".
+-Typescript is transcompiled into javascript,it is not replacement.
+
+Features:
+-It is strongly typed.
+-It is strictly typed.
+-It is OOP lanaguage.
+-It support complete extensiblity,reusability,separtion.
+-It support code level security etc.
+
+
+Typescript Architecture:
+=======================
+1.Typescript Core Compiler
+-It verifies the code synatx
+-it checks the code synatx.
+-It checkes the data type.
+-It Manages input and output operations
+-It verifies code blocks and conversions of data.
+
+[core.ts,progarm.ts,scanner.ts,parser.ts,emitter.ts,checker.ts]
+
+2.Standalone Compiler
+-It Transcompiles the typescript code into javscript.
+-Browser can interpret only Javascript
+[tsc.ts]
+
+3.Language Service
+-A Service is pre-defined business logic used by compiler to verify the code and compile the code.
+-Service is set of factories.
+-Factory is set of functions and values.
+[services.ts]
+
+4.TS Server
+-it hosts the TS progarms
+-it compiles them and manages request/response.
+
+[tsserver.ts]
+
+5.VS Shim
+-It makes the language platform neutral.
+-it can run on any enviromement and device.
+
+[shims.ts]
+
+code =>tranlated => native code =>platform dependent.
+
+code => tranlated => managed Code => Platform indpendent 
+[shims.ts]
+
+
+6.Managed Langauge Service:
+-It is the code suitable for every OS service.
+-It compries of set of libries that can run on every device and in any environment.
+
+Setup and install Typescript on your PC.
+
+>npm install typescript -g
+
+
+1.Create a Project for Typescript
+
+>npm init -y [package.json]
+>tsc -init
+
+2.Add folders
+-public
+-src
+
+3.Add TS file
+index.ts
+
+4.Transcompile
+tsc index.ts
+
+5.load this in html
+	html code
+
+02/01/2024
+===========
+
+1.Variables:
+	-Typescript variables are strongly typed.
+	-You have to define the data type while configuring variable.
+
+Synatx:	var name:dataType=value;
+
+-if data type is not defined by default is it "any"type.
+-You can assign various typed of values
+
+var x; =>x is any type
+x=10;
+x="A"
+x=true
+
+-Typescript support "type inference".if data type is not define then it can  configure data type according to value initalized.
+
+var x=10; => x is number
+x='A'  =>invalid
+
+-The data types of typescript are all same as javascript
+
+a)Primitive Type
+number
+string
+boolean
+null
+undefined
+symbol
+bigint
+
+-Typescript support "union" of types.
+======================================
+syntax:
+	var x:number|string;
+	var number|string|boolean;
+
+var x:number|string;
+x=10;
+x="A"
+x=boolean ==>invalid
+
+Typescript Non-Primitive Types
+===============================
+1.Array
+-Typescript array can handle various types of data same as javascript
+-it can also restrict to same type as other languages.
+
+Javascript:
+var values=[];  =>any type
+var values=new Array();
+
+Typescript:
+	var values:number[];
+	var values:string[]=new Array();
+	var values:any[]=[];
+	var values:any[]=new Array();
+
+
+Q:what is tuple?
+=>It is collection that allows various types of values to initlialize or assign into memory
+
+var values:any[]=[]  =>tuple
+var values:any[]=new Array();=>not tuple
+
+-Typescript support union of types for array
+-How ever you can't initalize various types configured in union.You can assign
+
+var values:string[]|number[]=[10,20,30]  =>valid
+var values:string[]|number[]=[10,"A"]  ==>invalid
+var values:string[]|number[]=["A","B"] =>valid
+
+var values:string[]|number[]=[];  =>valid
+values[0]=10;
+values[1]="A";
+
+
+NOte:All array methods are same in javascript
+
+
+2.Object:
+	-It is a key ans value collection.
+	-Key is string type and value can be strongly typed in Typescript
+
+Synatx:
+	var obj:{key:dataType,key:dataType}={}
+
+
+-Every key configured in structure is mandatory to implement.
+-You can configure optional key by using null reference character "?"
+
+-Synatx:
+	var obj:{key:dataType,key?:dataType}={}
+
+
+Array of Object
+var values:{}[]=[{}]
+var values:{key,type}[]=[{},{}]
+
+3.Data Type:
+	var dob:Date=new Date();
+
+4.Regular Expreesion Type:
+	var pattern:RegExp=//;
+	
+
+
+03/01/2024
+===========
+
+	Typescript Functions
+
+-Functions is configured with return type.
+
+function Name():dataType|void{
+
+}
+
+
+-Function parameters are defined with type.
+
+function Name(para:type):dataType|void{
+
+}
+
+
+-Function parameters can be configured as "optional parameter"
+-Optional parameters are defined using null-reference character "?"
+-Optional parameter must be the last parameter.
+-A required parameters can't defined after optional parameter.
+
+
+		Typescript OOP
+
+-Contracts in OOP.
+-Contracts defines rules for designing a component.
+-Rules can be for data and logic.
+-Developer can't ignore any rule until or unless it is configured as optional.
+-Developer can't add any functionality or data that is not defined in contract.
+-In OOp contracts are designed by using "Interface".
+
+Synatx:
+
+interface Name{
+//rules for proerties & methods
+}
+
+-It must conatin only rules not implementation.
+interface Name{
+Property:DataType;
+Property:DataType=value;//invalid
+}
+
+
+-A contract can have optional rules "?"
+-optional rules are defined to configure Goals.
+-A contract can have readonly rules.
+-Readonly rules will allow to initialize but will not allow to assign.
+
+Synatx:
+
+interface IName{
+readonly Property:Type;
+}
+
+-A contract can be extened by another contract
+-it support mutiple inheritance of contracts.
+
+syntax:
+	interface IName extends Name1,Name2,Name3{
+
+	}
+
+interface IBasicDetails {
+  Name: string;
+  Price: number;
+  Qty: number;
+  Total(): number;
+  Print(): void;
+}
+
+interface ICategory {
+  CategoryName: string;
+}
+
+interface IProduct extends ICategory, IBasicDetails {
+  Title: string;
+}
+
+let product: IProduct = {
+  Name: "Samsung TV",
+  Price: 340000.67,
+  Qty: 2,
+  Total: function (): number {
+    return this.Qty * this.Price;
+  },
+  Print: function () {
+    console.log(
+      `Name: ${this.Name} Price:\n${this.Price}\n Qty: ${
+        this.Qty
+      } Total: ${this.Total()},\nTitle:${this.Title},\nCategoryName:${
+        this.CategoryName
+      }}`
+    );
+  },
+  Title: "TV Details",
+  CategoryName: "TV",
+};
+
+product.Print();
+
+
+
+04/01/2024
+===========
+
+Typescript -OOP
+-Contract -Interface
+-Rule for properties and methods
+-Readonly rules
+-extensding cntracts
+-optionals rules
+
+Typescript class:
+=================
+
+-configuring a class is same as JS
+a)declartion
+b)expression
+
+class Name{
+
+
+}
+
+
+let ref=class{}
+
+
+
+-class members are same.
+
+a)property
+b)Accessor
+c)method
+d)Constructor
+
+-Typescript class provides static and non-static members.
+
+Static:
+-It refres to continuous memory.
+-The memory allocated to first object will continue for next object.
+-Static members are defined by using "static" keyword.
+-They are accessed within or outside class by using class name.
+-it is connected in access.
+
+Dynamic:
+-It referes to distcreet memory.
+-The memory allocated for an object is destroyed when object completes its actions.
+-Memory is newly allocated for every object.
+-It is disconnected in access.
+-By default every member is dynamic.
+-They are accesssed within class by using "this" keyword abd outside class by using instance of class.
+
+Typescript class provides access modifiers 
+1.public
+2.private
+3.protected
+
+public :
+-it configures accessbility for a member.
+-A public member is accessible from any location,within the class or outside the class.
+-You can access in derived class or from ant another class.
+
+private :
+-it configure a private access for member.
+-it is accessible only within the specified class.
+-it is not accessible outside class.
+
+
+protected:
+-it configure a protected access for member.
+-protected referes to accessible within the class and in derived class only by using derived class object.
+
+-Properties are configured with access modifier and data type
+
+public Name:string;
+private Price:number;
+
+-Methods are configure with access modifiers,return type and parameter type.
+
+public Total(quality:number,price:number):number{
+
+return quality* price;
+
+}
+
+public Print():void{
+
+}
+
+-Inheritance,Aggregation and ploynorphism are same.
+
+	Template in Typescript
+-abstract class.
+
+05/01/2024
+=============
+Typescript Templates
+-A Template comprises of pre-defined data and logic.which you can implement and customized according to requirement.
+-Template are mostly used in rollouts.
+-A template is configure as "abstract" class.
+-An abstract class comprises of methods and properties implemented with functionality and marked for implementation.
+-You can mark using "abstract".
+
+abstract PropertyName:type;
+
+abstract MethodName():type|void;
+
+-Abstract members are implemented in extened class.
+-An abstract class hide the structures and provide only functionality for implemenetaion,which is know as "Abstraction".
+-if a class is having at least one abstract member then it must be marked as abstract
+
+
+Generics
+=========
+
+-Generic refers to "Type safe".
+-A type safe componenet allows any type of data and also restrict to specific type once intialized with data type.
+You can use generic type for
+a)function
+b)method
+c)parameter
+d)property
+e)class
+
+interface IProductABC {
+  Name: string;
+  Price: number;
+}
+
+function Print<T>(data: T): T {
+  return data;
+}
+
+console.log(Print<string>("A"));
+console.log(Print<number>(1));
+console.log(Print<IProductABC>({ Name: "TV", Price: 30000.56 }));
+console.log(Print<String[]>(["A", "B", "C"]));
+
+You can't use operators on generic types,every functionality you must handle using methods or functions.
+
+
+
+Enum[Enumeration]
+-Enum is a set of constants.
+if you configure Enum with numeric constants,then they have auto implementaion for values bases on existing values.
+
+06/01/2024
+===========
+
+Module
+
+-Module is set of values,function,classes,templates,contracts etc.
+-Module requires a module system like
+1.Common JS
+2.Require JS
+3.UMD
+4.AMD
+5.ESNext
+
+
+Namespace
+-A namespace is a collection of related type of classes,template or components.
+-It allows to configure a multi level hierarchy for member in module system.so that it reduces ambiquity issue.
+
+Syantx:
+	namespace Name{
+	//sub namespace
+	//classes
+	//contracts
+	//templates
+	}
+
+
+/// <require path="../Team-A/TeamAComponets.ts"/>
+/// <require path="../Team-B/TeamBComponents.ts"/>
+
+
+you can import and implement the library of namespace using "///" directive
+
+/// <reference path="../folder/file.ts"/>
+
+E:\WorkSpace\8.UI\1.React\Typescript\src\project\App>tsc --outFile index.js index.ts
+
+E:\WorkSpace\8.UI\1.React\Typescript\src\project\App>node index.js
+Team A Print Method
+Team B Print Method
+
+
+
+Create React Typescript Application:
+------------------------------------
+npx create-react-app appname --template typescript
+
+npm i bootstrap bootstrap-icons axios formik yup --save
+
+
+Naming in TS project:
+
+.ts  => comtracts,templates
+.tsx =>components
+
+State in Typescript:
+
+const[categories,setCategories=useState<string[]>([]);
+
+
+08/01/2024
+===========
+Typescript To-do App
+
+1.Bcakend Database in MongoDB
+
+database:users
+collection:users,appointments
+
+
+users={UserId,UserName,Password,Mobile}
+appointment={Id,Title,Date,Description}
+
+2.API with Node & Express
+
+npm i mongodb express cors --save
+
+api.js
+
+3.create react Typescript application
+
+>npx create-react-app react-typescript-todo --template typescript
+
+4.install follwing libries
+>npm i mongodb express cors bootstrap bootstrap-icons axios formik --save
+
+
+>npm i react-router-dom --save
+
+
+09/01/2024
+==========
+Continue Previous class example
+
+
+10/01/2024
+===========
+
+
+React Hooks
+-React 17+ versions introduced Hooks for "Function Components".
+-Hook is a function that acts as a service for component.
+-Service is pre-defined business logic,which you can inject and implement from any application.
+-Service comprises of 2 components.
+ a)Provider
+ b)Injector
+
+-Provider locates the value or function in memory.
+-Injector is responsible for injecting the value or function into component.
+-React hooks can be used only in function components,not in class components.
+-React Provides serveral pre-defined hooks and also allows to create custom hooks.
+
+Custom Hook:
+-Hook must be a function.
+-Hook function must return a type.
+-Hook must be used in a function component only.
+-It can be parameterized or parameterless.
+-it must be used always at higer hierarchy,don't use a hook inside another function.
+	export function componenet{
+		function loadData(){
+			const[getter,setter]=useState();
+		} ==>invalid not allowed.
+	}
+Ex:
+1.Add a new folder into "src" by name "hooks"
+2.Add a new file
+	"captcha.js"
+3.export function useCaptcha() {
+    var a = Math.random() * 10;
+    var b = Math.random() * 10;
+    var c = Math.random() * 10;
+    var d = Math.random() * 10;
+    var e = Math.random() * 10;
+    var f = Math.random() * 10;
+    var code = `${Math.round(a)}${Math.round(b)}${Math.round(c)}${Math.round(d)}${Math.round(e)}${Math.round(f)}`;
+    return code;
+}
+4.Login.jsx
+
+-React built-in Hooks
+
+useState();
+useEffect();
+useContext();
+useRef();
+useReducer(); etc.
+
+FAQ:How to configure unmount and mount using useEffect>
+=> useEffect(()=>{
+	
+return()=>{
+//on mount
+}
+return()=>{
+//action on unmount.
+}
+},[]);
+
+
+11//1/2024
+===========
+
+useRef =>
+-it is used to create a reference for function or values,which are used internally by the application but not rendered.
+Synatx:
+	let ref=useRef(null);
+
+-You can access the reference value by using the reference property "current".
+
+ref.current ===> read
+ref.current =value;  =>write
+
+
+useContext() =>
+-Context refer to memory
+-it is the memory allocated for parent component and made available to other child components that run within the context of parent.
+-if memory configure with useState() then it is not accessible to child component.
+-useContext() is used to configure a context memory that can be share to its child components.
+-it is used as a service that comprises
+a)Provider
+b)Injector
+
+-Context memory is create by using "createContext()".
+-Context memory uses a context provider that locates value in memory.
+-useContext() is a injector that injects the context values into a component.
+
+1.Create Context:
+	let UserDetails=createContext(null);
+
+2.Configure the context provider with value in parent component
+	<UserDetails.Provider value={anyValue}>
+		//scope for child components
+	<UserDetails.Provider>
+3.You can access the context memory in child components by using the injector "useContex()"
+
+let data=useContext(UserDetails);
+{data}
+
+
+
+useReducer()
+-it is predictable state conatiner.
+-it can store data for application,that is accessible across all component.
+-React 18X version implicity provide useReducer(),how ever if you want to use the predictable state conatiner
+at larger scale you can use a javascript library called "Redux".
+
+18/01/2024
+===========
+
+useReducer():
+-it is used to configure a centeralized and predictable state for component.
+-centeralized allows to store data at application level so that it is accessible to all component.
+-Predictable allows the developer to track the changes in values and know exactly what is the data store and rendered into UI.
+-it defines application state,which is maintained from application start to end.
+-Reducer comprises of follwing components.
+a)store
+b)state
+c)reducer
+d)actions
+e)UI
+
+-store is the location where data is kept
+-state is the medium which can access data from store and render into UI.
+-UI is the location where data is displayed.
+-UI is the location where changes in data are detected.
+-Reducer identifies the action performed and update data into store.
+
+
+Steps:
+1.Configure intital state,which is the store.it specifies the data to store.
+
+let initialState={count:0} =>store conatins count=0;
+
+2.Create a reducer,which specifies the actions and data to update.
+
+function reducer(state,action){
+
+
+switch(action.type){
+
+	case "join":
+		return{count:state.count+1}
+
+	case "exit":
+		return{count:state.count-1}		
+	}
+}
+
+
+3.Any componenet can use the reducer and state configured by reducer[store] with a hook called "useReducer()"
+
+const[state,dispatch]=useReducer(action,initialState);
+
+function JoinClick(){
+	dispatch({type:"join"})
+}
+
+
+function ExitClick(){
+	dispatch({type:"exit"})
+}
+
+{state.count} Viewers
+
+
+
+steps:
+1.Configure initial state,which is the store.it specifies the data to store.
+
+ let initialState={count:0} =>store conatins count=0
+
+2.Create a reducer,which specifies the actions  and data to update.
+
+function reducer(store,action){
+
+switch(action.type){
+case "join":
+	return {count:state.count+1}
+case "exit":
+	return {count:state.count-1}
+
+}
+
+}
+
+	
+3.Any component can use the reducer and state configured by reducer[store] with a hook called "useReducer()"
+
+	const[state,dispatch]=useReducer(action,initialState);
+	
+	function JoinClick(){
+		dispatch({type:'join'})
+	}
+
+
+	function ExitClick(){
+		dispatch({type:'exit'})
+	}
+
+
+	{state.count}  Viewer
+
+
+
+Redux:
+
+-it is javascript library for mantaining state.
+-it is used by Javascript application to configure predictable state.
+-it is centralized
+-it is debuggable .
+-it is predictable
+-it is cross platform.
+
+Using Reduc in react APp:
+
+1.install Reducx Library
+	>npm i react-redux --save
+
+2. INstall Redux Toool kit [provides ad-oncs for redux]
+
+ > npm i @reduxjs/toolkit --save
+
+
+3. At higer level of application development you can use
+1.Slicers
+2.Reducers
+3.Store
+
+
+4.Create a Slicer
+
+*it is required for configuring initial state.
+*Initial state defines what value you want to store in local state.
+*it also defines the reducer
+* reducer identifies the changes in state and updates the state values
+* reducer can access state and action
+* collect payload and store in state
+* Export the actions and initial State.
+
+
+19/01/2024
+===========
+
+react-redux
+@redux/toolkit
+
+Ex:Implementing Redux in Fakestore App
+
+
+1.Create a cart slicer
+-it conatins a cart slicer
+-it contains reducer with actions
+-it contains reference name
+
+
+const cartSlice=createSlice(name:'',InitialState,reducers:action(){});
+
+2.Configure store by using redux toolkit "createStore()"
+
+import cartSlicer from "./cart-slicer";
+import { configureStore } from "@reduxjs/toolkit";
+
+export default configureStore({
+    reducer: {
+        store: cartSlicer
+    }
+})
+
+
+3.Configure provider at application level,it is responsible for locating the store and injecting into components.
+
+index.js
+
+<Provider store={store}>
+//you startup component
+</Provider>
+
+
+4.Dispatch actions from any component
+
+-react redux provides "useDispatch"
+-it is  used to dispatch the action configured in reducer.
+-it will deliver the payload[data] to store ,which is stored in initialState;
+
+ const dispatch = useDispatch();
+ 
+    const handleAddToCart = (product) => {
+        dispatch(addToCart(product));
+    } 
+
+20/01/2024
+=============
+
+React App using Webpack Bundler:
+
+1.Create a new folder for project on your pc.
+	react-app-using-webpack
+	
+2.Open in VS Code
+
+> npm init -y     [package.json]
+
+
+3.Create basic folder structure
+
+app
+|-public
+    |-index.html
+|src
+  |-index.js
+
+4.install the follwing libraries for project
+
+npm install webpack webpack-cli --save-dev
+npm install html-webpack-plugin --save-dev
+npm install --save-dev webpack-dev-server
+npm install @babel/core @babel/preset-env babel-loader --save-dev
+npm install react react-dom --save
+npm install @babel/preset-react --save-dev
+
+react
+react-dom
+babel/preset
+webpack-dev-server
+werbpack-html-template
+
+webpack,webpack-cli  =>core webpack library
+html-webpack-plugin =>to access Html files and bundle
+webpack-dev-server =>to configure a server to run your app
+@babel  => for compiling JSX and js file
+react,react-dom  => react core,virtual dom
+
+5.Go to index.js file
+
+import React from "react"
+import { createRoot } from "react-dom/client"
+const root = createRoot(document.getElementById("root"))
+root.render(
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>
+)
+
+
+6.create a webpack configuration file.
+
+webpack.config.js
+
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+
+module.exports = {
+  entry: "./src/index.js",
+  output: {
+    filename: "main.js",
+    path: path.resolve(__dirname, "build"),
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.join(__dirname, "public", "index.html"),
+    }),
+  ],
+  devServer: {
+    static: {
+      directory: path.join(__dirname, "build"),
+    },
+    port: 8080,
+  },
+  module: {
+      rules: [
+        {
+          test: /\.(js)$/,
+          exclude: /node_modules/,
+          use: ["babel-loader"],
+        },
+      ],
+  },
+  resolve: {
+    extensions: ["*", ".js"],
+  },
+};
+
+
+
+ 
+7. Configure compiler for project  by adding a new file
+
+
+.babelrc            =>https://babeljs.io/
+
+{
+    "presets": [
+      "@babel/preset-env",
+      ["@babel/preset-react", {
+      "runtime": "automatic"
+     }]
+    ]
+}
+
+
+8. Goto package.json and configure the batch operations using script
+
+ "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode production",
+    "start": "webpack serve --mode development"
+  }
+
+9.Start react app
+
+npm run start
+
+
+
+React Unit Testing
+-Unit Testing is the process of testing every component function or class.
+-it is required to check if "As-Is'matching with "To-Be".
+
+AS-IS			TO-BE			GAP
+What your		What client		What client wants
+technology is		Wants?			and what your technology not having	
+capable of					java 20%,.NET 10%,PHP 2%,Python 8%
+
+AS-IS==TO-BE  =>Test Pass
+AS-IS!==TO-BE	=>Test Fail
+
+There are various testing framework used for JS based applications
+1.Jasmine-Karma
+2.JEST
+3.Protractor etc..
+-React Template is configured with JEST framework
+-Testing every component have 3 phase
+1.Arrange
+2.Act
+3.Assert
+
+
+-JEST basic functions and properties include
+
+test()
+render()
+screen()
+data-testid
+toBeInDocument()
+toHAveAttribute()
+getByTestId
+getByName() etc.
+
+-Test document is defined by using
+"name.test.js"
+"name.spec.js"
+
+
+test()  =>to configure
+render() => to arrange
+expect() => to act and assert
+
