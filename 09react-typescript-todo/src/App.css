@@ -1,0 +1,11 @@
+.conatiner-fluid {
+  background-image: url("../public/todo-baner.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.shade {
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 100vh;
+}

@@ -1,0 +1,19 @@
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  color: white;
+}
+
+.main-title {
+  font-size: 50px;
+  font-weight: bold;
+  font-family: Arial;
+}
+
+.main-subtitle {
+  font-size: 30px;
+  font-weight: Arial;
+}
